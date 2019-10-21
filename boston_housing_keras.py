@@ -10,6 +10,7 @@ def build_model():
     model.add(layers.Dense(64, activation='relu'))
     model.add(layers.Dense(1))
     model.compile(optimizer='rmsprop', loss='mse', metrics=['mae']) # mse = mean squared error, mae = mean absolute error
+    model.summary()
     return model
 
 def smooth_curve(points, factor=0.9):
